@@ -11,14 +11,15 @@
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
+	background-color: #F4F4F4;
 
 }
 
-.container {
+/* .container {
 	width: 80%;
 	margin: 0 auto;
 	padding: 20px;
-}
+} */
 
 /* Navigation Bar */
 nav {
@@ -29,13 +30,22 @@ nav {
 	position: sticky;
 	top: 0 ;
 	z-index: 1000;
-	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+nav .logo_image{
+	height: 50px;
 }
 
 nav ul {
 	list-style: none;
 	display: flex;
 	justify-content: center;
+	position: relative;
+
 }
 
 nav ul li {
@@ -87,7 +97,6 @@ nav ul li .active_nav_1:hover {
 
 /* Hero Section */
 #hero {
-	margin-top: -25%;
 	background: url(./img/hero\ back.jpg) no-repeat center center/cover;
 	color: white;
 	text-align: center;
@@ -112,8 +121,13 @@ nav ul li .active_nav_1:hover {
 }
 
 #hero h1 {
-	font-size: 3.5em;
+	font-size: 3.2em;
 	margin-bottom: 20px;
+}
+
+#hero h1 span{
+	font-size: 1.2em;
+	color: var(--secondary-color);
 }
 
 #hero p {
@@ -184,9 +198,15 @@ nav ul li .active_nav_1:hover {
 
 .contact-wrapper {
 	display: flex;
+
+	justify-content: space-around;
 	align-items: center;
-	justify-content: space-between;
+
 	flex-wrap: wrap;
+	text-align: center;
+
+	margin: auto 10%;
+
 }
 
 .contact-form {
@@ -200,7 +220,7 @@ nav ul li .active_nav_1:hover {
 }
 
 .contact-image img {
-	width: 100%;
+	width: 50%;
 	height: auto;
 	border-radius: 10px;
 }
@@ -252,6 +272,7 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 .footer-section {
@@ -326,9 +347,18 @@ footer p {
 
 	/* nav ---------- */
 	nav{
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center; 
 		transition: 0.5s ease;
-		transform: translateY(-100%);
+		transform: translateY(-40%);
 	}
+
+	nav .logo_image{
+		margin-top: 30px;
+	}
+
+
 	nav ul li {
 		margin: 0 8px;
 	}
@@ -339,11 +369,15 @@ footer p {
 		display: block;
 	}
 
+	#hero {
+		margin-top: -25%;
+	}
 
 	/* footer ---------- */
 	footer{
 		padding: 0;
 	}
+	
 	.footer-content {
 		text-align: center;
 	}
@@ -357,6 +391,10 @@ footer p {
 		justify-content: center;
 	}	
 
+	.footer-content .about{
+		display: none;
+	}
+
 	/* hero ---------- */
 	#hero h1{
 		font-size: 3rem;
@@ -368,6 +406,7 @@ footer p {
 	/* about us */
 	.founders {
 		margin-bottom: -30%;
+
 	}
 
 	.card{
